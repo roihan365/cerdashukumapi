@@ -24,7 +24,7 @@ class IndoSbertModel(object):
         qdrant_host="https://651082da-8166-4011-ab66-0ed93f9d3f5a.us-east4-0.gcp.cloud.qdrant.io:6333"
         api_key="kxureD9-xh0VsZOxs7GuSQxpGsU9ffO_gWUB-HRyVDcC100zpjiXEQ"
 
-        qdrant_client = QdrantClient(url=qdrant_host, api_key=api_key)
+        qdrant_client = QdrantClient(url=qdrant_host, api_key=api_key, timeout=55)
 
         input_embedding = self.model.encode(sentence,prompt=promptText, show_progress_bar=True,normalize_embeddings=True,device=self.device)
         if(returnPredict):
