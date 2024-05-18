@@ -1,0 +1,20 @@
+version: '3'
+
+services:
+  app-cerdashukumapi:
+    build: .
+    container_name: app-cerdashukumapi
+    command: uvicorn app.main:app --host 0.0.0.0 --port 15400 --reload
+    ports:
+      - "8000:15400"
+    volumes:
+      - .:/usr/src/app
+    networks:
+      - app-cerdashukumapi
+    environment:
+      - PYTHONPATH=/usr/src/app
+
+
+networks:
+  app-cerdashukumapi:
+    driver: bridge
