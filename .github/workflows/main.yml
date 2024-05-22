@@ -55,5 +55,7 @@ jobs:
           username: ${{ secrets.REMOTE_SERVER_USERNAME }}
           password: ${{ secrets.REMOTE_SERVER_PASSWORD }}
           port: 22
+          command_timeout: 200m
           script: |
-            docker pull roihan365/cerdashukumapi:main;docker-compose up -d
+            docker pull roihan365/cerdashukumapi:main
+            docker-compose up -d
