@@ -57,5 +57,7 @@ jobs:
           port: 22
           command_timeout: 200m
           script: |
+            docker rm -f cerdashukumapi-container
+            docker rmi roihan365/cerdashukumapi:main
             docker pull roihan365/cerdashukumapi:main
-            docker-compose up -d
+            docker run -d -p 8000:15400 --name cerdashukumapi-container roihan365/cerdashukumapi:main uvicorn app.main:app --host 0.0.0.0 --port 15400 --reload
