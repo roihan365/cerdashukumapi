@@ -2,9 +2,6 @@ import torch
 from sentence_transformers import SentenceTransformer
 import time
 from qdrant_client import QdrantClient
-import pandas as pd
-import numpy as np
-from sklearn.metrics.pairwise import cosine_similarity
 
 class IndoSbertModel(object):
     """
