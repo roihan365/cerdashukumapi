@@ -1,7 +1,6 @@
 from fastapi import FastAPI, status
 
 from app.process_input import ProcessInput
-from app.recsys.process_input_recsys import ProcessInputRecSys
 from app.langkah_hukum.process_input_gemini import ProcessInputGemini
 
 from app.Model import IndoSbertModel
