@@ -12,7 +12,7 @@ indosbert = IndoSbertModel()
 
 @app.get("/")
 async def root():
-    return {"message": "Hello Banjarmasin!"}
+    return {"message": "Hello Banjarmasin"}
 
 @app.post("/get-pasal", status_code=status.HTTP_201_CREATED)
 def getPasal(input: ProcessInput):
