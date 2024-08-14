@@ -19,4 +19,4 @@ COPY . .
 EXPOSE 8080
 
 # Run the server using uvicorn when the container starts
-CMD ["uvicorn", "app.main:app", "--host", "0.0.0.0", "--port", "8080", "--reload"]
+CMD ["uvicorn", "app.main:app", "--host", "0.0.0.0", "--port", "15400", "--reload"]
